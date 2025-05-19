@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --background-color: #f0fdf4;
+    --first-circle-color: #bbf6d0;
+    --second-circle-color: #d0f9df;
+    --quote-container-border: #2aca65;
+    --box-shadow: 0 0 10px #2aca65, 0 0 20px #2aca65, 0 0 2px #2aca65;
+    --button-color: #4ade80;
+    --h1--color: var(--quote-container-border);
+}
+.yellow{
+    --background-color: #fefce8;
+    --first-circle-color: #fef9c3;
+    --second-circle-color: #fef08a;
+    --quote-container-border: #eab308;
+    --box-shadow: 0 0 10px #eab308, 0 0 20px #eab308, 0 0 2px #eab308;
+    --button-color: #facc15;
+    --h1--color: var(--quote-container-border);
+}
+.black{
+    --background-color: #1f2937;
+    --first-circle-color: #374151;
+    --second-circle-color: #4b5563;
+    --quote-container-border: #9ca3af;
+    --box-shadow: 0 0 10px #9ca3af, 0 0 20px #9ca3af, 0 0 2px #9ca3af;
+    --button-color: #6b7280;
+    --h1--color: var(--quote-container-border);
+    }
+.purple{
+    --background-color: #f5f3ff;
+    --first-circle-color: #ddd6fe;
+    --second-circle-color: #c4b5fd;
+    --quote-container-border: #8b5cf6;
+    --box-shadow: 0 0 10px #8b5cf6, 0 0 20px #8b5cf6, 0 0 2px #8b5cf6;
+    --button-color: #a78bfa;
+    --h1--color: var(--quote-container-border);
+}
+.red{
+    --background-color: #fef2f2;
+    --first-circle-color: #fecaca;
+    --second-circle-color: #fca5a5;
+    --quote-container-border: #ef4444;
+    --box-shadow: 0 0 10px #ef4444, 0 0 20px #ef4444, 0 0 2px #ef4444;
+    --button-color: #f87171;
+    --h1--color: var(--quote-container-border);
+}
+.blue{
+    --background-color: #eff6ff;
+    --first-circle-color: #bfdbfe;
+    --second-circle-color: #93c5fd;
+    --quote-container-border: #3b82f6;
+    --box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 2px #3b82f6;
+    --button-color: #60a5fa;
+    --h1--color: var(--quote-container-border);
+}
+body{
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 70px;
+    gap: 3rem;
+}
+header h1{
+    text-align: center;
+    color: var(--h1--color);
+}
+.color-palette{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.color{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+#yellow{
+    background-color: #eab308;
+}
+#black{
+    background-color: #000;
+}
+#purple{
+    background-color: #8b5cf6;
+}
+#red{
+    background-color: #ef4444;
+}
+#blue{
+    background-color: #3b82f6;
+}
+.first-circle{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: var(--first-circle-color);
+    position: absolute;
+    top: 20%;
+    right: 62%;
+    z-index: 0;
+}
+#quote-container{
+    height: 300px;
+    width: 400px;
+    padding: 20px;
+    font-size: 1.5rem;
+    background-color: #fff;
+    border: 1px solid var(--quote-container-border);
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--box-shadow);
+}
+#quote-author{
+    position: absolute;
+    right: 10%;
+    padding: 10px;
+}
+.second-circle{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--second-circle-color);
+    position: absolute;
+    right: 30%; 
+    margin: 10px;  
+}
+button{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--button-color);
+    font-size: 1.3rem;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+button:hover{
+    transform: rotate(360deg);
+    background-color: var(--quote-container-border);
+    scale: 1.1;
+}
