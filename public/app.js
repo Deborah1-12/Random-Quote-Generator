@@ -25,7 +25,7 @@ const getQuotes = async () => {
     const dataArray = data.quotes;        // Extract quotes array from API response
     
     // Fetch quotes from local JSON file
-    const res = await fetch('../public/quotes.json');
+    const res = await fetch('/quotes.json');
     if (!res.ok) throw new Error(`Local JSON error: ${res.status}`);    // Throw error if local fetch fails
     const newData = await res.json();        // Parse local JSON
     const newDataArray = newData;             // Assume local JSON is an array of quotes
