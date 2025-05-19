@@ -14,4 +14,5 @@ Built using vanilla JavaScript and DOM manipulation
 Clean and responsive design
 
 Live App Link: http://random-quote-generator-ml52w7jm9.vercel.app
+
 Tech Stack: HTML, CSS, JavaScript (DOM, Fetch API)
