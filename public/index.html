@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Quote Generator</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-    <link rel="stylesheet" href="/CSS/queries.css">
+    <meta charset="UTF-8"><!-- Set character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Responsive viewport for mobile -->
+    <title>Random Quote Generator</title><!-- Page title shown in browser tab -->
+    
+    <!-- Link to external stylesheet for main styles -->
+    <link rel="stylesheet" href="/public/style.css">
+    <!-- Link to external stylesheet for media queries -->
+    <link rel="stylesheet" href="/public/queries.css">
+    
+    <!-- Load Font Awesome icons from CDN -->
     <script src="https://kit.fontawesome.com/49985d21bc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <h1> Quote Generator</h1>
-        <h1>Choose Your Color!</h1>
+        <h1> Quote Generator</h1><!-- Main heading -->
+        <h1>Choose Your Color!</h1><!-- Secondary heading for color selection -->
+        
+        <!-- Container for color selection buttons -->
         <div class="color-palette">
-            <div id="yellow" class="color"></div>
-            <div id="black" class="color"></div>
-            <div id="purple" class="color"></div>
-            <div id="red" class="color"></div>
-            <div id="blue" class="color"></div>
+            <div id="yellow" class="color"></div><!-- Yellow color button -->
+            <div id="black" class="color"></div><!-- Black color button -->
+            <div id="purple" class="color"></div><!-- Purple color button -->
+            <div id="red" class="color"></div><!-- Red color button -->
+            <div id="blue" class="color"></div><!-- Blue color button -->
         </div>
     </header>
+    
     <main>
-        <div class="first-circle"></div>
+        <div class="first-circle"></div><!-- Decorative circle element -->
+        
+        <!-- Container for the quote and author text -->
         <div id="quote-container">
-            <p id="quote-display">"My identity is in the fact that I'm loved by God."</p>
-            <p id="quote-author">Hailey Bieber</p>
+            <p id="quote-display">"My identity is in the fact that I'm loved by God."</p><!-- Initial quote displayed -->
+            <p id="quote-author">Hailey Bieber</p><!-- Initial quote author displayed -->
+            
+            <!-- Button to fetch a new quote; icon from Font Awesome -->
             <button id="quote-button"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
-        <div class="second-circle"></div>
+        
+        <div class="second-circle"></div><!-- Another decorative circle element -->
     </main>
-<script src="/JS/app.js"></script>    
+    
+    <!-- Link to external JavaScript file -->
+    <script src="/public/app.js"></script>    
 </body>
 </html>

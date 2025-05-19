@@ -1,9 +1,13 @@
+/* Reset margin, padding, and set box-sizing globally */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Set a system font stack for better cross-platform consistency */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+/* Define CSS custom properties (variables) for default colors and styles */
 :root{
     --background-color: #f0fdf4;
     --first-circle-color: #bbf6d0;
@@ -12,7 +16,10 @@
     --box-shadow: 0 0 10px #2aca65, 0 0 20px #2aca65, 0 0 2px #2aca65;
     --button-color: #4ade80;
     --h1--color: var(--quote-container-border);
+    --transition: all 1s ease;
 }
+
+/* Yellow theme*/
 .yellow{
     --background-color: #fefce8;
     --first-circle-color: #fef9c3;
@@ -22,6 +29,8 @@
     --button-color: #facc15;
     --h1--color: var(--quote-container-border);
 }
+
+/* Black theme*/
 .black{
     --background-color: #1f2937;
     --first-circle-color: #374151;
@@ -30,7 +39,9 @@
     --box-shadow: 0 0 10px #9ca3af, 0 0 20px #9ca3af, 0 0 2px #9ca3af;
     --button-color: #6b7280;
     --h1--color: var(--quote-container-border);
-    }
+}
+
+/* Purple theme*/
 .purple{
     --background-color: #f5f3ff;
     --first-circle-color: #ddd6fe;
@@ -40,6 +51,8 @@
     --button-color: #a78bfa;
     --h1--color: var(--quote-container-border);
 }
+
+/* Red theme*/
 .red{
     --background-color: #fef2f2;
     --first-circle-color: #fecaca;
@@ -49,6 +62,8 @@
     --button-color: #f87171;
     --h1--color: var(--quote-container-border);
 }
+
+/* Blue theme*/
 .blue{
     --background-color: #eff6ff;
     --first-circle-color: #bfdbfe;
@@ -58,30 +73,42 @@
     --button-color: #60a5fa;
     --h1--color: var(--quote-container-border);
 }
+
+/* Body styling using CSS variables for colors */
 body{
     background-color: var(--background-color);
     display: flex;
     align-items: center;
     flex-direction: column;
     position: relative;
-    padding: 70px;
-    gap: 3rem;
+    padding: 50px;
+    gap: 3rem; /* Space between flex items */
+    transition: var(--transition);
 }
+
+/* Style for all h1 elements inside header */
 header h1{
     text-align: center;
     color: var(--h1--color);
+    transition: var(--transition);
 }
+
+/* Container holding color buttons, displayed in a row */
 .color-palette{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 10px; /* Space between color buttons */
 }
+
+/* Common style for each color button */
 .color{
     height: 40px;
     width: 40px;
-    border-radius: 50%;
+    border-radius: 50%; /* Make them circular */
 }
+
+/* Individual background colors for each color button */
 #yellow{
     background-color: #eab308;
 }
@@ -97,16 +124,21 @@ header h1{
 #blue{
     background-color: #3b82f6;
 }
+
+/* First decorative circle on the page */
 .first-circle{
     height: 80px;
     width: 80px;
     border-radius: 50%;
     background-color: var(--first-circle-color);
     position: absolute;
-    top: 20%;
+    top: 30%;
     right: 62%;
-    z-index: 0;
+    z-index: 0; /* Behind other elements */
+    transition: var(--transition);
 }
+
+/* Quote container box styling */
 #quote-container{
     height: 300px;
     width: 400px;
@@ -116,14 +148,19 @@ header h1{
     border: 1px solid var(--quote-container-border);
     border-radius: 10px;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Above circles */
     box-shadow: var(--box-shadow);
+    transition: var(--transition);
 }
+
+/* Positioning the quote author text */
 #quote-author{
     position: absolute;
     right: 10%;
     padding: 10px;
 }
+
+/* Second decorative circle on the page */
 .second-circle{
     height: 100px;
     width: 100px;
@@ -131,8 +168,11 @@ header h1{
     background-color: var(--second-circle-color);
     position: absolute;
     right: 30%; 
-    margin: 10px;  
+    margin: 10px;
+    transition: var(--transition);  
 }
+
+/* Styling for the quote refresh button */
 button{
     position: absolute;
     bottom: 5%;
@@ -147,8 +187,10 @@ button{
     font-size: 1.3rem;
     color: #fff;
     border: none;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
+
+/* Hover effect for the button - rotate and scale */
 button:hover{
     transform: rotate(360deg);
     background-color: var(--quote-container-border);
